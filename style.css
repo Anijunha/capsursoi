@@ -1,0 +1,227 @@
+body {
+    font-family: InterTight, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #2b2b32;
+    background-image: url(assets/img/cover.jpg); 
+}
+
+header {
+    background: #333;
+    color: #7c6142;
+    padding: 1em 0;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #16161b;
+}
+
+nav {
+    margin: 1em 0;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #F2CB9B;
+}
+
+nav a:hover {
+    color: #7c6142;  
+}
+
+main {
+    padding: 20px;
+}
+
+.accueil {
+    margin: 10px;
+    top: 20%;
+    left: 20%;
+    position: absolute;
+}
+
+.lintr {
+    top: 25%;
+    left: 20%;
+    position: absolute;
+}
+
+.apropos {
+    margin: 10px;
+    top: 10%;
+    left: 7%;
+    position: absolute;
+}
+
+.bandeau {
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    margin-top: 11em;
+    overflow: hidden;
+}
+
+.start-button {
+    font-size: 24px;
+    padding: 20px 40px;
+    background-image: url(assets/img/bouton_index1.png);
+    font-family: 'InterTight', regular;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.start-container {
+    margin-top: 7%;
+}
+
+.start-button:hover {
+    background-image: url(assets/img/bouton_index2.png);
+    transform: scale(1.3);
+}
+
+.start-button span {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.start-button.hovered span {
+    opacity: 0;
+}
+
+.start-image {
+    width: 250px; /* Ajuste la taille selon tes besoins */
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.start-image:hover {
+    transform: scale(1);
+    content: url(assets/img/bouton_index2.png); /* Change l'image au survol */
+}
+
+.custom-font1 {
+    font-family: 'InterTight', regular;
+    font-size: 40pt;
+    color: #F2CB9B;
+}
+
+.custom-font2 {
+    font-family: 'InterTight', regular;
+    font-size: 22pt;
+    color: white;
+    margin-inline: 10%;
+}
+
+.custom-font3 {
+    font-family: 'Grodna';
+    font-size: 18pt;
+}
+
+@font-face {
+    font-family: 'InterTight';
+    src: url('assets/fonts/InterTight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Grodna';
+    src: url('assets/fonts/Grodna.ttf') format('truetype');
+}
+
+.intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #151515;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.welcome-text {
+    font-family: 'InterTight', regular;
+    font-size: 30pt;
+    color: white;  
+    opacity: 0;
+    transition: opacity 1s ease-in-out; 
+}
+
+.explore-btn {
+    font-size: 18pt;
+    padding: 10px 20px;
+    background-color: #110f8a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; 
+    font-family: 'InterTight', regular;
+}
+
+.explore-btn:hover {
+    background-color: darkred;
+}
+
+.explore-link {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    color: darkred;  
+    text-decoration: none; 
+    padding: 10px 20px;
+    border: 2px solid darkred; 
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.explore-link:hover {
+    background-color: darkred;
+    color: white;
+}
+
+.moving-link {
+    position: absolute;  
+    top: 50%;  
+    left: 50%;  
+    transform: translate(-50%, -50%); 
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    animation: moveLeftRight 4s ease-in-out infinite;  
+}
+
+@keyframes moveLeftRight {
+    0% {
+        transform: translate(-50%, -50%) translateX(-50px); 
+    }
+    50% {
+        transform: translate(-50%, -50%) translateX(50px);  
+    }
+    100% {
+        transform: translate(-50%, -50%) translateX(-50px); 
+    }
+}
+
+.moving-link:hover {
+    color: darkred;
+    text-decoration: underline;
+}
+
+
