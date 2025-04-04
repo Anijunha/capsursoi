@@ -39,26 +39,14 @@ body {
     transform: translateY(-50%);
 }
 
-    
-.overlay {
+/* Texte centré pour la dernière image */
+.text-overlay {
     position: absolute;
-    top: 2%;
-    left: 0;
+    top: 10%;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2); /* Transparence à 20% */
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-}
-
-/* Texte au centre */
-.overlay-text {
     color: white;
-    font-size: 3rem;
-    font-family: 'InterTight', sans-serif;
-    font-weight: bold;
+    font-size: 24px;
 }
 
 /* Styles pour les boutons */
