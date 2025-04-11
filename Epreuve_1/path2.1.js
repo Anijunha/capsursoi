@@ -1,34 +1,36 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => { 
     const slides = document.querySelectorAll(".slide");
     const nextArrow = document.getElementById("nextArrow");
     const prevArrow = document.getElementById("prevArrow");
     let currentIndex = 0;
 
-    // Fonction pour afficher la bonne slide et gérer la visibilité des flèches
+    // Fonction pour afficher la slide active et gérer la flèche gauche
     function updateSlide(index) {
-        // Masquer toutes les slides
         slides.forEach(slide => slide.classList.remove("active"));
-
-        // Afficher la slide actuelle
         slides[index].classList.add("active");
 
-        // Gérer la visibilité des flèches
+        // Masquer la flèche gauche uniquement si on est sur la première slide
         prevArrow.style.display = index === 0 ? "none" : "block";
-        nextArrow.style.display = index === slides.length - 1 ? "none" : "block";
+
+        // Toujours afficher la flèche droite
+        nextArrow.style.display = "block";
     }
 
-    // Afficher la première slide au chargement
+    // Initialiser la première slide
     updateSlide(currentIndex);
 
-    // Événement sur la flèche droite
+    // Flèche suivante
     nextArrow.addEventListener("click", () => {
         if (currentIndex < slides.length - 1) {
             currentIndex++;
             updateSlide(currentIndex);
+        } else {
+            // Si on est à la fin, rediriger
+            window.location.href = "../Portes/porte2.html";
         }
     });
 
-    // Événement sur la flèche gauche
+    // Flèche précédente
     prevArrow.addEventListener("click", () => {
         if (currentIndex > 0) {
             currentIndex--;
