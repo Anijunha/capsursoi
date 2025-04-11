@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Vérifier si on est sur la dernière slide
         if (currentIndex === slides.length) {
-            window.location.href = "../Epreuve_4/epreuve4.html"; // Redirige vers la nouvelle page
+            window.location.href = "../Portes/porte2.html"; // Redirige vers la nouvelle page
         }
     });
 });
