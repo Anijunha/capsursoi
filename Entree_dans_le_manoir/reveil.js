@@ -2,9 +2,16 @@
 const slides = document.querySelectorAll('.slide');
 const prevButton = document.getElementById('prevArrow');
 const nextButton = document.getElementById('nextArrow');
+const pauseButton = document.getElementById('pauseButton');
+const musicButton = document.getElementById('musicButton');
+const pauseIcon = document.getElementById('pauseIcon');
+const musicIcon = document.getElementById('musicIcon');
+
 // Crée une variable pour gérer l'audio
 const audio = new Audio("../assets/sounds/Explications.wav");
 audio.loop = false;  // Désactive la boucle de l'audio
+let isPaused = false; // Pour savoir si l'audio est en pause
+let isMuted = false; // Pour savoir si le son est coupé
 
 // Initialiser un index de la diapositive active
 let activeIndex = 0;
@@ -20,21 +27,31 @@ function showSlide(index) {
     // Vérification de l'image de fond pour jouer l'audio
     const backgroundImage = slides[index].style.backgroundImage;
 
-    // Lancer un audio spécifique si l'image correspond
-    if (backgroundImage && backgroundImage.includes("7.jpg")) {
-        const audio7 = new Audio('../assets/sounds/Explications.wav'); // Assurez-vous que le chemin de l'audio est correct
-        audio7.play();
+    // Lancer un audio spécifique si l'image correspond et si l'audio n'est pas encore joué
+    if (backgroundImage && backgroundImage.includes("7.jpg") && !audio.playing) {
+        audio.play();
     }
-        // Événement pour l'audio quand il se termine
-        audio.addEventListener("ended", () => {
-            // Quand l'audio se termine, on passe à la prochaine slide sans la couper
-            slides[currentIndex].classList.remove("active");
-            currentIndex++;
-            if (currentIndex < slides.length) {
-                slides[currentIndex].classList.add("active");
-            }
-        });
 }
+
+// Fonction pour mettre en pause ou reprendre l'audio et la musique
+pauseButton.addEventListener('click', () => {
+    isPaused = !isPaused;
+    pauseIcon.src = isPaused ? "../assets/svg/pauseB2.svg" : "../assets/svg/pauseB.svg";
+
+    if (isPaused) {
+        audio.pause();  // Mettre l'audio en pause
+    } else {
+        audio.play();   // Reprendre la lecture
+    }
+});
+
+// Fonction pour couper ou réactiver le son du site
+musicButton.addEventListener('click', () => {
+    isMuted = !isMuted;
+    musicIcon.src = isMuted ? "../assets/svg/musicNX.svg" : "../assets/svg/musicB.svg";
+
+    audio.muted = isMuted; // Mute ou non l'audio
+});
 
 // Afficher la première diapositive au départ
 showSlide(activeIndex);

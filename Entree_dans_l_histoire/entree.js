@@ -1,12 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
     const slides = document.querySelectorAll(".slide");
-    const pauseButton = document.getElementById("pauseButton");
+    const pauseButton = document.getElementById("pauseButton"); // il manquait cette ligne !
+    const pauseIcon = document.getElementById("pauseIcon");
+    const musicButton = document.getElementById("musicButton");
+    const musicIcon = document.getElementById("musicIcon");    
     const nextButton = document.getElementById("nextButton");
     const prevButton = document.getElementById("prevButton");
 
     let currentIndex = 0;
     let canNavigate = false;
     let isPaused = false;
+    let isMuted = false;
     let audio = new Audio();
 
     const audioSources = [
@@ -61,7 +65,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const src = audioSources[currentIndex];
         if (src) {
             audio = new Audio(src);
-            audio.play();
+            audio.muted = isMuted; // garde l'état mute même en changeant de slide
+            if (!isPaused) {
+                audio.play();
+            }
         }
     }
 
@@ -76,18 +83,33 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 2000);
     }
 
-    // Boutons
+    // Boutons navigation
     nextButton.addEventListener("click", showNextSlide);
     prevButton.addEventListener("click", showPrevSlide);
 
+    // Bouton pause/lecture
     pauseButton.addEventListener("click", () => {
         isPaused = !isPaused;
-        pauseButton.textContent = isPaused ? "▶" : "⏸";
+
+        pauseIcon.src = isPaused
+            ? "../assets/svg/pauseB2.svg"
+            : "../assets/svg/pauseB.svg";
 
         if (isPaused) {
             audio.pause();
         } else {
             audio.play();
         }
+    });
+
+    // Bouton mute/unmute
+    musicButton.addEventListener("click", () => {
+        isMuted = !isMuted;
+
+        musicIcon.src = isMuted
+            ? "../assets/svg/musicNX.svg"
+            : "../assets/svg/musicB.svg";
+
+        audio.muted = isMuted;
     });
 });

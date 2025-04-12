@@ -4,7 +4,10 @@ body {
     padding: 0;
     text-align: center;
     background-color: #2b2b32;
-    background-image: url(assets/img/cover.jpg); 
+    background-image: url(assets/img/cover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 header {
@@ -42,7 +45,9 @@ main {
 }
 
 .explications {
-    font-family: Walter;
+    font-family: InterTight;
+    font-size: 1.2em;
+    line-height: 130%;
     text-align: center;
     position: relative;
     margin-inline: 10px;
@@ -56,14 +61,14 @@ main {
 .accueil {
     margin: 10px;
     top: 25%;
-    left: 35%;
+    left: 30%;
     position: absolute;
 }
 
 .linktr {
     margin: 10px;
     top: 25%;
-    right: 35%;
+    right: 30%;
     position: absolute;
 }
 
@@ -81,6 +86,11 @@ main {
     font-family: 'InterTight', regular;
     font-size: 35pt;
     color: #F2CB9B;
+    display: inline-block; /* Nécessaire pour que le texte puisse avoir une bordure en bas */
+    border-bottom: 12px solid #F2CB9B;
+    padding-bottom: 10px;
+    border-top: 12px solid #F2CB9B;
+    padding-top: 10px;
 }
 
 .custom-font2 {
@@ -91,8 +101,13 @@ main {
 }
 
 .custom-font3 {
-    font-family: 'Grodna';
-    font-size: 18pt;
+    font-family: 'InterTight';
+    font-size: 1em;
+}
+
+.titre {
+    font-size: 1.6em;
+    color: #F2CB9B;
 }
 
 @font-face {

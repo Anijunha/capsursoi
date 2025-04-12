@@ -112,8 +112,13 @@ main {
 
 .custom-font1 {
     font-family: 'InterTight', regular;
-    font-size: 40pt;
+    font-size: 3.5em;
     color: #F2CB9B;
+    display: inline-block; /* Nécessaire pour que le texte puisse avoir une bordure en bas */
+    border-bottom: 12px solid #F2CB9B;
+    padding-bottom: 10px;
+    border-top: 12px solid #F2CB9B;
+    padding-top: 10px;
 }
 
 .custom-font2 {
@@ -152,6 +157,7 @@ main {
     opacity: 0;
     pointer-events: none;
     z-index: 9999;
+    transition: opacity 1s ease-in-out; /* Transition de fade-out */
 }
 
 .welcome-text {
@@ -163,7 +169,7 @@ main {
 }
 
 .explore-btn {
-    font-size: 18pt;
+    font-size: 2em;
     padding: 10px 20px;
     background-color: #110f8a;
     color: white;
@@ -172,6 +178,7 @@ main {
     opacity: 0;
     transition: opacity 1.5s ease-in-out; 
     font-family: 'InterTight', regular;
+    border-radius: 10px;
 }
 
 .explore-btn:hover {
@@ -221,7 +228,44 @@ main {
 
 .moving-link:hover {
     color: darkred;
-    text-decoration: underline;
 }
 
+.attention-text {
+    position: absolute;
+    bottom: 20px; /* Ajuste la distance du bas si nécessaire */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: 'InterTight', sans-serif;
+    font-size: X em;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 12;
+}
 
+/* Positionner le texte cliquable sur le côté droit */
+.revue-link-container {
+    position: absolute;
+    top: 10%; /* Ajuste la position verticale */
+    right: 7%; /* Positionne à 7% du bord droit */
+}
+
+/* Style du texte cliquable avec opacity 0 par défaut */
+.revue-link {
+    font-family: 'InterTight', regular;
+    font-size: 22pt;
+    color: #F2CB9B;
+    text-decoration: none; /* Aucun soulignement par défaut */
+    opacity: 0; /* Le texte est invisible par défaut */
+    transition: opacity 0.3s ease-in-out; /* Transition fluide pour l'apparition */
+}
+
+/* Le texte devient visible lorsqu'on survole le container */
+.revue-link-container:hover .revue-link {
+    opacity: 1; /* Le texte devient visible */
+}
+
+/* Effet au survol du texte */
+.revue-link:hover {
+    color: #7c6142; /* Changer la couleur du texte au survol */
+}
