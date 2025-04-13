@@ -6,7 +6,7 @@ body {
 }
 
 .fond {
-    background: url(../assets/img/porte_fond.png);
+    background: url(../../assets/img/porte_fond.png);
     background: cover;
     position: absolute;
     overflow: hidden;
@@ -34,13 +34,13 @@ body {
 }
 
 .porte1:hover {
-    content: url('../assets/img/porte_O.png');
+    content: url('../../assets/img/porte_O.png');
 }
 
 .porte2:hover {
-    content: url('../assets/img/porte_O.png');
+    content: url('../../assets/img/porte_O.png');
 }
 
 .porte3:hover {
-    content: url('../assets/img/porte_O.png');
+    content: url('../../assets/img/porte_O.png');
 }

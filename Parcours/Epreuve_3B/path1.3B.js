@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
             currentIndex++;
             updateSlide(currentIndex);
         } else {
-            window.location.href = "../Portes/porte2.html";
+            window.location.href = "../PortesB/porte2B.html";
         }
     });
 

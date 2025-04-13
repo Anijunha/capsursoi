@@ -1,5 +1,5 @@
 // Créer un objet Audio pour le son
-const doorSound = new Audio('../assets/sounds/door.wav');
+const doorSound = new Audio('../../assets/sounds/door.wav');
 
 // Fonction pour jouer le son au survol
 function playSound() {

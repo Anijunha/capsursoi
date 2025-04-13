@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const audioSources = [
         null, // slide 0 : fond_noir.png, pas d'audio
-        "../assets/sounds/Background.wav",
-        "../assets/sounds/Background_1.wav",
-        "../assets/sounds/Background_2.wav",
+        "../../assets/sounds/Background.wav",
+        "../../assets/sounds/Background_1.wav",
+        "../../assets/sounds/Background_2.wav",
         null // slide 4 : gif final, pas d'audio
     ];
 
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (currentIndex < slides.length - 1) {
             showSlide(currentIndex + 1);
         } else {
-            window.location.href = "../Entree_dans_le_manoir/reveil.html";
+            window.location.href = "../Entree_dans_le_manoirB/reveilB.html";
         }
     }
 
@@ -92,8 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
         isPaused = !isPaused;
 
         pauseIcon.src = isPaused
-            ? "../assets/svg/pauseB2.svg"
-            : "../assets/svg/pauseB.svg";
+            ? "../../assets/svg/pauseB2.svg"
+            : "../../assets/svg/pauseB.svg";
 
         if (isPaused) {
             audio.pause();
@@ -107,8 +107,8 @@ document.addEventListener("DOMContentLoaded", () => {
         isMuted = !isMuted;
 
         musicIcon.src = isMuted
-            ? "../assets/svg/musicNX.svg"
-            : "../assets/svg/musicB.svg";
+            ? "../../assets/svg/musicNX.svg"
+            : "../../assets/svg/musicB.svg";
 
         audio.muted = isMuted;
     });

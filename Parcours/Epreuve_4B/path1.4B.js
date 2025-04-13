@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
             currentIndex++;
             updateSlide(currentIndex);
         } else {
-            window.location.href = "end.html";
+            window.location.href = "endB.html";
         }
     });
 

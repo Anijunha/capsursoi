@@ -144,7 +144,7 @@ html, body {
 
 @font-face {
     font-family: 'InterTight';
-    src: url('../assets/fonts/InterTight.ttf') format('truetype');
+    src: url('../../assets/fonts/InterTight.ttf') format('truetype');
 }
 
 .top-buttons {
