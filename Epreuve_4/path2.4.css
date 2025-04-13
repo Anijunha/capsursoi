@@ -150,3 +150,22 @@ body {
     font-family: 'InterTight';
     src: url('../assets/fonts/InterTight.ttf') format('truetype');
 }
+
+.overlay-text {
+    color: white;
+    font-size: 2.5em;
+    font-family: 'InterTight', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 16.5em;
+    top: 30%;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    display: block; /* Initialement caché */
+    z-index: 1000;
+}
+
+.overlay-text.visible {
+    opacity: 1;
+    display: block; /* Afficher le texte lorsque la classe 'visible' est ajoutée */
+}

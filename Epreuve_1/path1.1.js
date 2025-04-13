@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const slides = document.querySelectorAll(".slide");
     const nextArrow = document.getElementById("nextArrow");
     const prevArrow = document.getElementById("prevArrow");
+    const finalText = document.getElementById("final-text"); // Le texte sur la dernière slide
     let currentIndex = 0;
 
     // Fonction pour afficher la slide active et gérer la flèche gauche
@@ -14,6 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Toujours afficher la flèche droite
         nextArrow.style.display = "block";
+
+        // Afficher le texte sur la dernière slide
+        if (index === slides.length - 1) {
+            finalText.classList.add("visible");
+        } else {
+            finalText.classList.remove("visible"); // Cacher le texte si ce n'est pas la dernière slide
+        }
     }
 
     // Initialiser la première slide
@@ -26,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
             updateSlide(currentIndex);
         } else {
             // Si on est à la fin, rediriger
-            window.location.href = "../Portes/porte2.html";
+            window.location.href = "../Portes/porte1.html";
         }
     });
 

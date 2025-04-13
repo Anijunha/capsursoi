@@ -1,19 +1,85 @@
 html {
-    height: 100%;  /* Assure que la hauteur de la page est 100% */
-    margin: 0;     /* Enlève les marges par défaut */
-}
-
-body {
+    height: 100%;
+    margin: 0;
     font-family: InterTight, sans-serif;
-    text-align: center;
-    background-color: #2b2b32;
     background-image: url(../assets/img/fond-coeur.jpg);
-    z-index: 1;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    text-align: center;
 }
 
+@font-face {
+    font-family: 'InterTight';
+    src: url('../assets/fonts/InterTight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Grodna';
+    src: url('../assets/fonts/Grodna.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Walter';
+    src: url('../assets/fonts/WalterTurncoat-Regular.ttf') format('truetype');
+}
+
+/* Écran blanc d’intro */
+#intro-overlay {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+#intro-overlay.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.intro-content {
+    max-width: 80%;
+    padding: 20px;
+    font-size: 1.4em;
+    line-height: 1.5;
+}
+
+/* Bouton rond */
+#enter-btn {
+    margin-top: 2em;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#enter-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.titre1 {
+    font-size: 2em;
+    color: #d3a771;
+}
+
+.texte1 {
+    font-size: 1.2em;
+    color: #e8b77a;
+}
+
+/* Autres styles existants */
 nav a {
     text-decoration: none;
     color: #F2CB9B;
@@ -29,7 +95,6 @@ main {
 
 .accueil {
     margin: 10px;
-    top: 25%;
     margin-top: 5em;
     text-align: center;
     position: relative;
@@ -50,25 +115,24 @@ main {
     margin-top: 50px;
 }
 
-@font-face {
-    font-family: 'InterTight';
-    src: url('../assets/fonts/InterTight.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Grodna';
-    src: url('../assets/fonts/Grodna.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Walter';
-    src: url('../assets/fonts/WalterTurncoat-Regular.ttf') format('truetype');
-}
-
 .exp {
-    position: absolute;         /* reste collée à la fenêtre */
-    bottom: 0;               /* tout en bas */
-    left: 50%;               /* centre horizontalement */
-    transform: translateX(-50%); /* recentre par rapport à sa propre largeur */
-    z-index: 100;            /* reste au-dessus du contenu si besoin */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.intro-content {
+    max-width: 80%;
+    padding: 20px;
+    font-size: 1.4em;
+    line-height: 1.5;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* Classe activée au chargement */
+.intro-content.visible {
+    opacity: 1;
 }

@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let isPaused = false;
     let isMuted = false;
     let audio = new Audio();
+    
+    const hoverInfo1 = document.getElementById("hoverInfo1");
+
 
     const audioSources = [
         null, // slide 0 : fond_noir.png, pas d'audio
