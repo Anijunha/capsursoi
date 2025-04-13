@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const audioSources = [
         null, // slide 0 : fond_noir.png, pas d'audio
-        "../assets/sounds/Background.wav",
-        "../assets/sounds/Background_1.wav",
-        "../assets/sounds/Background_2.wav",
+        "../assets/sounds/BackgroundA.wav",
+        "../assets/sounds/BackgroundB.wav",
+        "../assets/sounds/BackgroundC.wav",
         null // slide 4 : gif final, pas d'audio
     ];
 
