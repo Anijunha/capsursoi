@@ -128,11 +128,6 @@ main {
     margin-inline: 10%;
 }
 
-.custom-font3 {
-    font-family: 'Grodna';
-    font-size: 18pt;
-}
-
 @font-face {
     font-family: 'InterTight';
     src: url('assets/fonts/InterTight.ttf') format('truetype');

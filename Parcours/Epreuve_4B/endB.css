@@ -1,0 +1,74 @@
+html {
+    height: 100%;  /* Assure que la hauteur de la page est 100% */
+    margin: 0;     /* Enlève les marges par défaut */
+}
+
+body {
+    font-family: InterTight, sans-serif;
+    text-align: center;
+    background-color: #2b2b32;
+    background-image: url(../assets/img/fond-coeur.jpg);
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #F2CB9B;
+}
+
+nav a:hover {
+    color: #7c6142;  
+}
+
+main {
+    padding: 20px;
+}
+
+.accueil {
+    margin: 10px;
+    top: 25%;
+    margin-top: 5em;
+    text-align: center;
+    position: relative;
+}
+
+.custom-font2 {
+    font-family: 'InterTight', regular;
+    font-size: 2.6em;
+    color: #F2CB9B;
+    margin-inline: 10%;
+}
+
+.titre {
+    font-size: 1.6em;
+    color: #F2CB9B;
+    line-height: 150%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+@font-face {
+    font-family: 'InterTight';
+    src: url('../assets/fonts/InterTight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Grodna';
+    src: url('../assets/fonts/Grodna.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Walter';
+    src: url('../assets/fonts/WalterTurncoat-Regular.ttf') format('truetype');
+}
+
+.exp {
+    position: absolute;         /* reste collée à la fenêtre */
+    bottom: 0;               /* tout en bas */
+    left: 50%;               /* centre horizontalement */
+    transform: translateX(-50%); /* recentre par rapport à sa propre largeur */
+    z-index: 100;            /* reste au-dessus du contenu si besoin */
+}
