@@ -36,7 +36,7 @@ function showSlide(index) {
 // Fonction pour mettre en pause ou reprendre l'audio et la musique
 pauseButton.addEventListener('click', () => {
     isPaused = !isPaused;
-    pauseIcon.src = isPaused ? "../assets/svg/pauseB2.svg" : "../assets/svg/pauseB.svg";
+    pauseIcon.src = isPaused ? "../../../assets/svg/pauseB2.svg" : "../../../assets/svg/pauseB.svg";
 
     if (isPaused) {
         audio.pause();  // Mettre l'audio en pause
@@ -48,7 +48,7 @@ pauseButton.addEventListener('click', () => {
 // Fonction pour couper ou réactiver le son du site
 musicButton.addEventListener('click', () => {
     isMuted = !isMuted;
-    musicIcon.src = isMuted ? "../assets/svg/musicNX.svg" : "../assets/svg/musicB.svg";
+    musicIcon.src = isMuted ? "../../../assets/svg/musicNX.svg" : "../../../assets/svg/musicB.svg";
 
     audio.muted = isMuted; // Mute ou non l'audio
 });
@@ -60,7 +60,7 @@ showSlide(activeIndex);
 nextButton.addEventListener('click', () => {
     // Vérifier si c'est la dernière diapositive (index 5)
     if (activeIndex === slides.length - 1) {
-        window.location.href = '../Portes/porte1.html'; // Rediriger vers la page spécifiée
+        window.location.href = '../../2/explications_2.html'; // Rediriger vers la page spécifiée
     } else {
         activeIndex = (activeIndex + 1) % slides.length; // Passer à la diapositive suivante
         showSlide(activeIndex);

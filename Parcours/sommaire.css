@@ -26,7 +26,20 @@ footer {
 }
 
 .sommaire-container {
-    padding: 100px 20px 120px;
+    padding: 50px 40px 140px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    grid-gap: 60px 40px; /* espace entre lignes et colonnes */
+    justify-items: center; /* centrer les blocs dans leur colonne */
+}
+
+.epreuve-section {
+    background-color: rgba(22, 22, 27, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 300px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
 .custom-font1 {
@@ -37,6 +50,10 @@ footer {
     border-top: 12px solid #F2CB9B;
     padding: 20px 0;
     display: inline-block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7%;
 }
 
 .custom-font2 {

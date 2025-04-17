@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (currentIndex < slides.length - 1) {
             showSlide(currentIndex + 1);
         } else {
-            window.location.href = "../../sommaire.html";
+            window.location.href = "../../1/explications_1.html";
         }
     }
 
