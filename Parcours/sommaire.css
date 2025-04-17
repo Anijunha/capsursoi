@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'InterTight';
+    src: url('../assets/fonts/InterTight.ttf') format('truetype');
+}
+
+body {
+    font-family: InterTight, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2b2b32;
+    background-image: url(../assets/img/coover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+footer {
+    background-color: #16161b;
+    color: white;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-family: InterTight;
+}
+
+.sommaire-container {
+    padding: 100px 20px 120px;
+}
+
+.custom-font1 {
+    font-family: 'InterTight', regular;
+    font-size: 3.5em;
+    color: #F2CB9B;
+    border-bottom: 12px solid #F2CB9B;
+    border-top: 12px solid #F2CB9B;
+    padding: 20px 0;
+    display: inline-block;
+}
+
+.custom-font2 {
+    font-family: 'InterTight', regular;
+    font-size: 26pt;
+    color: #F2CB9B;
+    margin-top: 2em;
+}
+
+.epreuve-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sommaire-link {
+    display: inline-block;
+    margin: 10px;
+    font-size: 20pt;
+    color: #ffffff;
+    text-decoration: none;
+    border: 2px solid #F2CB9B;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sommaire-link:hover {
+    background-color: #7c6142;
+    color: white;
+    transform: scale(1.05);
+}

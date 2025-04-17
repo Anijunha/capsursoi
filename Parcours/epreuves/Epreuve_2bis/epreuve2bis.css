@@ -4,37 +4,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-
-/* Texte centré pour la dernière image */
-.text-overlay {
-    position: absolute;
-    top: 7%;
-    font-family: InterTight;
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-size: 2em;
-}
-
-/* Styles pour les boutons */
-.buttons {
-    position: absolute;
-    bottom: 10%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5%;
-    top: 55%;
-}
-
-.left {
-    margin-left: 22%;
-}
-
-.right {
-    margin-right: 22%;
-}
-
 .slideshow {
     position: relative;
     height: 100vh;
@@ -54,6 +23,48 @@ body {
 
 .slide.active {
     opacity: 1;
+}
+
+.next-arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    padding: 15px 20px;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+/* Texte centré pour la dernière image */
+.text-overlay {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 2.1em;
+}
+
+/* Styles pour les boutons */
+.buttons {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.left {
+    margin-left: 10%;
+}
+
+.right {
+    margin-right: 10%;
 }
 
 .arrow-button {
@@ -122,10 +133,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-decoration: none;
     border: none;
     text-align: center;
