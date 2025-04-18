@@ -176,7 +176,8 @@ main {
 }
 
 .explore-btn img {
-    width: 250px; 
+    width: 250px;
+    height: auto;
     transition: transform 0.3s ease-in-out;
     content: url("assets/svg/buttondebut1.svg");
     display: block;
