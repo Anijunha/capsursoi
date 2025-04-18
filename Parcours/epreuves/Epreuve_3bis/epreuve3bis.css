@@ -125,13 +125,13 @@ body {
 
 @font-face {
     font-family: 'InterTight';
-    src: url('../assets/fonts/InterTight.ttf') format('truetype');
+    src: url('../../../assets/fonts/InterTight.ttf') format('truetype');
 }
 
 .custom-svg-button {
     display: flex;
     justify-content: center;  /* Centrage horizontal */
-    background-image: url('../assets/svg/boutonton-rect.svg');
+    background-image: url('../../../assets/svg/boutonton-rect.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

@@ -28,9 +28,9 @@ footer {
 .sommaire-container {
     padding: 50px 40px 140px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
-    grid-gap: 60px 40px; /* espace entre lignes et colonnes */
-    justify-items: center; /* centrer les blocs dans leur colonne */
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 60px 40px; 
+    justify-items: center; 
 }
 
 .epreuve-section {
@@ -58,9 +58,14 @@ footer {
 
 .custom-font2 {
     font-family: 'InterTight', regular;
-    font-size: 26pt;
+    font-size: 2.1em;
     color: #F2CB9B;
     margin-top: 2em;
+    font-variant: small-caps;
+}
+
+.chiffre {
+    font-size: 0.8em;
 }
 
 .epreuve-section ul {
@@ -71,13 +76,14 @@ footer {
 .sommaire-link {
     display: inline-block;
     margin: 10px;
-    font-size: 20pt;
+    font-size: 1.7em;
     color: #ffffff;
     text-decoration: none;
     border: 2px solid #F2CB9B;
     padding: 10px 20px;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
+    font-variant: small-caps;
 }
 
 .sommaire-link:hover {

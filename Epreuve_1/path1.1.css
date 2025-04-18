@@ -161,11 +161,11 @@ body {
     top: 30%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    display: none; /* Initialement caché */
+    display: none;
     z-index: 1000;
 }
 
 .overlay-text.visible {
     opacity: 1;
-    display: block; /* Afficher le texte lorsque la classe 'visible' est ajoutée */
+    display: block; 
 }

@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
             updateSlide(currentIndex);
         } else {
             // Si on est à la fin, rediriger
-            window.location.href = "../Portes/porte3.html";
+            window.location.href = "../../4/explications_4.html";
         }
     });
 

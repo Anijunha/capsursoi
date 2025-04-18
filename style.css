@@ -102,21 +102,21 @@ main {
 }
 
 .start-image {
-    width: 250px; /* Ajuste la taille selon tes besoins */
+    width: 250px; 
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
 }
 
 .start-image:hover {
     transform: scale(1);
-    content: url(assets/img/bouton_index2.png); /* Change l'image au survol */
+    content: url(assets/img/bouton_index2.png); 
 }
 
 .custom-font1 {
     font-family: 'InterTight', regular;
     font-size: 3.5em;
     color: #F2CB9B;
-    display: inline-block; /* Nécessaire pour que le texte puisse avoir une bordure en bas */
+    display: inline-block; 
     border-bottom: 12px solid #F2CB9B;
     padding-bottom: 10px;
     border-top: 12px solid #F2CB9B;
@@ -154,7 +154,7 @@ main {
     opacity: 0;
     pointer-events: none;
     z-index: 9999;
-    transition: opacity 1s ease-in-out; /* Transition de fade-out */
+    transition: opacity 1s ease-in-out; 
 }
 
 .welcome-text {
@@ -166,20 +166,42 @@ main {
 }
 
 .explore-btn {
-    font-size: 2em;
-    padding: 10px 20px;
-    background-color: #110f8a;
-    color: white;
+    position: relative;
+    background: none;
     border: none;
     cursor: pointer;
     opacity: 0;
-    transition: opacity 1.5s ease-in-out; 
-    font-family: 'InterTight', regular;
-    border-radius: 10px;
+    transition: opacity 1.5s ease-in-out;
+    padding: 0;
 }
 
-.explore-btn:hover {
-    background-color: darkred;
+.explore-btn img {
+    width: 250px; 
+    transition: transform 0.3s ease-in-out;
+    content: url("assets/svg/buttondebut1.svg");
+    display: block;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.explore-btn img:hover {
+    content: url("assets/svg/buttondebut2.svg");
+
+}
+
+.explore-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'InterTight', sans-serif;
+    font-size: 2.1em;
+    white-space: nowrap;
+    font-weight: bold;
+    pointer-events: none;
+    font-variant: small-caps;
 }
 
 .explore-link {
@@ -229,7 +251,7 @@ main {
 
 .attention-text {
     position: absolute;
-    bottom: 20px; /* Ajuste la distance du bas si nécessaire */
+    bottom: 20px; 
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -240,29 +262,25 @@ main {
     z-index: 12;
 }
 
-/* Positionner le texte cliquable sur le côté droit */
 .revue-link-container {
     position: absolute;
-    top: 10%; /* Ajuste la position verticale */
-    right: 7%; /* Positionne à 7% du bord droit */
+    top: 10%; 
+    right: 7%; 
 }
 
-/* Style du texte cliquable avec opacity 0 par défaut */
 .revue-link {
     font-family: 'InterTight', regular;
     font-size: 22pt;
     color: #F2CB9B;
-    text-decoration: none; /* Aucun soulignement par défaut */
-    opacity: 0; /* Le texte est invisible par défaut */
-    transition: opacity 0.3s ease-in-out; /* Transition fluide pour l'apparition */
+    text-decoration: none; 
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out; 
 }
 
-/* Le texte devient visible lorsqu'on survole le container */
 .revue-link-container:hover .revue-link {
-    opacity: 1; /* Le texte devient visible */
+    opacity: 1; 
 }
 
-/* Effet au survol du texte */
 .revue-link:hover {
-    color: #7c6142; /* Changer la couleur du texte au survol */
+    color: #7c6142; 
 }

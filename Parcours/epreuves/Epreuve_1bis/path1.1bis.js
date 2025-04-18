@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
             updateSlide(currentIndex);
         } else {
             // Si on est à la fin, rediriger
-            window.location.href = "../Portes/porte1.html";
+            window.location.href = "../../3/explications_3.html";
         }
     });
 

@@ -39,7 +39,6 @@ body {
     transform: translateY(-50%);
 }
 
-/* Texte centré pour la dernière image */
 .text-overlay {
     position: absolute;
     top: 10%;
@@ -49,7 +48,6 @@ body {
     font-size: 2.1em;
 }
 
-/* Styles pour les boutons */
 .buttons {
     position: absolute;
     bottom: 10%;
@@ -128,7 +126,7 @@ body {
 
 .custom-svg-button {
     display: flex;
-    justify-content: center;  /* Centrage horizontal */
+    justify-content: center;  
     background-image: url('../assets/svg/boutonton-rect.svg');
     background-repeat: no-repeat;
     background-size: cover;

@@ -14,14 +14,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let audio = new Audio();
 
     const audioSources = [
-        null, // slide 0 : fond_noir.png, pas d'audio
+        null, 
         "../assets/sounds/BackgroundA.wav",
         "../assets/sounds/BackgroundB.wav",
         "../assets/sounds/BackgroundC.wav",
-        null // slide 4 : gif final, pas d'audio
+        null
     ];
 
-    // Afficher la première slide
     slides[currentIndex].classList.add("active");
     updateNavButtons();
     startNavigationDelay();
@@ -30,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function showSlide(index) {
         if (index < 0 || index >= slides.length) return;
 
-        // Pause l’audio actuel
         if (!audio.paused) {
             audio.pause();
             audio.currentTime = 0;
@@ -65,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const src = audioSources[currentIndex];
         if (src) {
             audio = new Audio(src);
-            audio.muted = isMuted; // garde l'état mute même en changeant de slide
+            audio.muted = isMuted; 
             if (!isPaused) {
                 audio.play();
             }
@@ -83,11 +81,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 2000);
     }
 
-    // Boutons navigation
     nextButton.addEventListener("click", showNextSlide);
     prevButton.addEventListener("click", showPrevSlide);
 
-    // Bouton pause/lecture
     pauseButton.addEventListener("click", () => {
         isPaused = !isPaused;
 
@@ -102,7 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Bouton mute/unmute
     musicButton.addEventListener("click", () => {
         isMuted = !isMuted;
 
