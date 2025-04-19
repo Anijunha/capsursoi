@@ -31,25 +31,45 @@ footer {
 
 .custom-font1 {
     font-family: 'InterTight', regular;
-    font-size: 3.5em;
+    font-size: 5em;
     color: #F2CB9B;
     border-bottom: 12px solid #F2CB9B;
     border-top: 12px solid #F2CB9B;
-    padding: 20px 0;
+    padding: 10px 0;
     display: inline-block;
+    font-variant: small-caps;
 }
 
 .custom-font2 {
     font-family: 'InterTight', regular;
-    font-size: 26pt;
-    color: #F2CB9B;
+    font-size: 1.9em;
+    color: #ffebd2;
     margin-top: 2em;
+    width: 35%;
+    text-align: left;
+    margin: 4%;
+}
+
+.titre {
+    color: #F2CB9B;
+    font-variant: small-caps;
+    font-size: 2.2em;
+}
+
+.rightt {
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 55%;
+    padding-bottom: 45px;
 }
 
 .epreuve-section ul {
     list-style: none;
     padding: 0;
 }
+
+
 
 .sommaire-link {
     display: inline-block;
