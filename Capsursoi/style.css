@@ -197,9 +197,7 @@ main {
 .explore-btn img:hover {
     content: url("assets/svg/boutonton-rect1.svg");
     transform: scale(1.07);
-
 }
-
 
 .explore-link {
     display: inline-block;
