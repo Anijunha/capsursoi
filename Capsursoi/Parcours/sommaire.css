@@ -25,6 +25,23 @@ footer {
     font-family: InterTight;
 }
 
+.accueil {
+    margin: 10px;
+    top: 10%;
+    left: 0;
+    position: absolute;
+    color: #F2CB9B;
+    text-decoration: none;
+}
+
+.custom-font5 {
+    font-family: 'InterTight', regular;
+    font-size: 22pt;
+    color: #F2CB9B;
+    margin-inline: 10%;
+}
+
+
 .sommaire-container {
     padding: 50px 40px 140px;
     display: grid;

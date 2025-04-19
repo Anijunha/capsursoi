@@ -7,11 +7,11 @@ body {
 .text-overlay {
     position: absolute;
     top: 7%;
-    font-family: InterTight;
+    font-family: Gloria;
     width: 100%;
     text-align: center;
     color: white;
-    font-size: 2em;
+    font-size: 5em;
 }
 
 .buttons {
@@ -47,10 +47,12 @@ body {
     background-position: center;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    pointer-events: none;
 }
 
 .slide.active {
     opacity: 1;
+    pointer-events: auto;
 }
 
 .arrow-button {
@@ -112,6 +114,11 @@ body {
     src: url('../assets/fonts/InterTight.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Gloria';
+    src: url('../assets/fonts/amatic-sc.bold.ttf') format('truetype');
+}
+
 .custom-svg-button {
     display: flex;
     justify-content: center;  
@@ -122,13 +129,13 @@ body {
     width: 300px;
     height: 300px;
     color: white;
-    font-size: 1.5rem;
+    font-size: 2.7rem;
     text-decoration: none;
     border: none;
     text-align: center;
-    font-family: 'InterTight', sans-serif;
+    font-family: 'Gloria';
     transition: transform 0.2s ease;
-    line-height: 1.2;
+    line-height: 0.7;
     margin-bottom: 0;
 }
 

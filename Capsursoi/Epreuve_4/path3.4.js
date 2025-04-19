@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextArrow = document.getElementById("nextArrow");
     const prevArrow = document.getElementById("prevArrow");
     const finalText = document.getElementById("final-text"); 
+    let currentIndex = 0;
 
     function updateSlide(index) {
         slides.forEach(slide => slide.classList.remove("active"));

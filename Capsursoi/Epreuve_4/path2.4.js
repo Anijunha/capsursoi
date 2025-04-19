@@ -1,33 +1,22 @@
-document.addEventListener("DOMContentLoaded", () => { 
-    const slides = document.querySelectorAll(".slide");
-    const nextArrow = document.getElementById("nextArrow");
-    const prevArrow = document.getElementById("prevArrow");
-    let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".slide"); 
+    const overlayText = document.getElementById("final-text"); 
+    let currentIndex = 0; 
 
     function updateSlide(index) {
         slides.forEach(slide => slide.classList.remove("active"));
         slides[index].classList.add("active");
 
-        prevArrow.style.display = index === 0 ? "none" : "block";
-
-        nextArrow.style.display = "block";
+        if (index === slides.length - 1) {
+            overlayText.classList.add("visible"); 
+        } else {
+            overlayText.classList.remove("visible"); 
+        }
     }
 
     updateSlide(currentIndex);
 
-    nextArrow.addEventListener("click", () => {
-        if (currentIndex < slides.length - 1) {
-            currentIndex++;
-            updateSlide(currentIndex);
-        } else {
-            window.location.href = "../Portes/porte4.html";
-        }
-    });
-
-    prevArrow.addEventListener("click", () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateSlide(currentIndex);
-        }
-    });
+    setTimeout(() => {
+        window.location.href = "../Portes/porte4.html"; 
+    }, 4000); 
 });

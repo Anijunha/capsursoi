@@ -149,13 +149,18 @@ body {
     src: url('../assets/fonts/InterTight.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Gloria';
+    src: url('../assets/fonts/amatic-sc.bold.ttf') format('truetype');
+}
+
 .overlay-text {
     color: white;
-    font-size: 2.5em;
-    font-family: 'InterTight', sans-serif;
+    font-size: 3.5em;
+    font-family: 'Gloria', sans-serif;
     font-weight: bold;
     text-align: center;
-    margin-top: 17em;
+    margin-top: 11.5em;
     top: 30%;
     opacity: 0;
     transition: opacity 1s ease-in-out;

@@ -46,14 +46,13 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2); /* Transparence à 20% */
+    background-color: rgba(0, 0, 0, 0.2); 
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-/* Texte au centre */
 .overlay-text {
     color: white;
     font-size: 3rem;
@@ -61,7 +60,6 @@ body {
     font-weight: bold;
 }
 
-/* Styles pour les boutons */
 .buttons {
     position: absolute;
     bottom: 10%;
@@ -108,19 +106,12 @@ body {
     z-index: 101;
 }
 
-.arrow-button img[alt="Flèche gauche"] {
-    width: 100%;               
-    height: 100%;             
-    object-fit: contain;                 
+.arrow-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     transition: transform 0.2s ease;
-}
-
-.arrow-button img[alt="Flèche droite"] {
-    width: 100%;               
-    height: 100%;             
-    object-fit: contain;                 
-    transition: transform 0.2s ease;
-}   
+}  
 
 .arrow-button img.hover {
     display: none;
@@ -138,34 +129,38 @@ body {
     transform: scale(1.1);
 }
 
-.arrow-button.left {
-    left: 10px;
-}
-
 .arrow-button.right {
     right: 10px;
 }
 
 @font-face {
     font-family: 'InterTight';
-    src: url('../assets/fonts/InterTight.ttf') format('truetype');
+    src: url('../../../assets/fonts/InterTight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Gloria';
+    src: url('../../../assets/fonts/amatic-sc.bold.ttf') format('truetype');
 }
 
 .overlay-text {
     color: white;
-    font-size: 2.5em;
-    font-family: 'InterTight', sans-serif;
+    font-size: 3.5em;
+    font-family: 'Gloria', sans-serif;
     font-weight: bold;
     text-align: center;
-    margin-top: 16.5em;
-    top: 30%;
+    margin-top: 11em;
     opacity: 1;
     transition: opacity 1s ease-in-out;
-    display: block; /* Initialement caché */
+    display: block; 
     z-index: 1000;
 }
 
 .overlay-text.visible {
     opacity: 1;
-    display: block; /* Afficher le texte lorsque la classe 'visible' est ajoutée */
+    display: block; 
+}
+
+#nextArrow {
+    display: block; 
 }

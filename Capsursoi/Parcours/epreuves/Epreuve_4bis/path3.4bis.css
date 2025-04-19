@@ -50,14 +50,13 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2); /* Transparence à 20% */
+    background-color: rgba(0, 0, 0, 0.2); 
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-/* Texte au centre */
 .overlay-text {
     color: white;
     font-size: 3rem;
@@ -65,7 +64,6 @@ body {
     font-weight: bold;
 }
 
-/* Styles pour les boutons */
 .buttons {
     position: absolute;
     bottom: 10%;
@@ -152,24 +150,27 @@ body {
 
 @font-face {
     font-family: 'InterTight';
-    src: url('../assets/fonts/InterTight.ttf') format('truetype');
+    src: url('../../../assets/fonts/InterTight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Gloria';
+    src: url('../../../assets/fonts/amatic-sc.bold.ttf') format('truetype');
 }
 
 .overlay-text {
     color: white;
-    font-size: 2.5em;
-    font-family: 'InterTight', sans-serif;
+    font-size: 3.5em;
+    font-family: 'Gloria', sans-serif;
     font-weight: bold;
     text-align: center;
-    margin-top: 15em;
-    top: 30%;
+    margin-top: 10em;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    display: none; /* Initialement caché */
-    z-index: 1000;
+    display: none; 
 }
 
 .overlay-text.visible {
     opacity: 1;
-    display: block; /* Afficher le texte lorsque la classe 'visible' est ajoutée */
+    display: block; 
 }

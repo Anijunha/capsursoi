@@ -19,10 +19,14 @@ body {
     background-position: center;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    pointer-events: none;
+
 }
 
 .slide.active {
     opacity: 1;
+    pointer-events: none;
+
 }
 
 .next-arrow {
@@ -149,14 +153,18 @@ body {
     src: url('../assets/fonts/InterTight.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Gloria';
+    src: url('../assets/fonts/amatic-sc.bold.ttf') format('truetype');
+}
+
 .overlay-text {
     color: white;
-    font-size: 2.5em;
-    font-family: 'InterTight', sans-serif;
+    font-size: 3.3em;
+    font-family: 'Gloria', sans-serif;
     font-weight: bold;
     text-align: center;
-    margin-top: 16.5em;
-    top: 30%;
+    margin-top: 5em;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     display: none; 

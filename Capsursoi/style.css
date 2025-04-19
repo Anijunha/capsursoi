@@ -140,6 +140,12 @@ main {
     src: url('assets/fonts/Grodna.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Gloria';
+    src: url('assets/fonts/amatic-sc.bold.ttf') format('truetype');
+}
+
+
 .intro-screen {
     position: fixed;
     top: 0;
@@ -158,8 +164,8 @@ main {
 }
 
 .welcome-text {
-    font-family: 'InterTight', regular;
-    font-size: 30pt;
+    font-family: 'Gloria', regular;
+    font-size: 4em;
     color: white;  
     opacity: 0;
     transition: opacity 1s ease-in-out; 
@@ -176,34 +182,24 @@ main {
 }
 
 .explore-btn img {
-    width: 250px;
-    height: auto;
+    width: 300px;
+    position: relative;
     transition: transform 0.3s ease-in-out;
-    content: url("assets/svg/buttondebut1.svg");
+    content: url("assets/svg/boutonton-rect1.svg");
     display: block;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    margin-top: 0;
 
 }
 
 .explore-btn img:hover {
-    content: url("assets/svg/buttondebut2.svg");
+    content: url("assets/svg/boutonton-rect1.svg");
+    transform: scale(1.07);
 
 }
 
-.explore-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-family: 'InterTight', sans-serif;
-    font-size: 2.1em;
-    white-space: nowrap;
-    font-weight: bold;
-    pointer-events: none;
-    font-variant: small-caps;
-}
 
 .explore-link {
     display: inline-block;

@@ -14,7 +14,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('https://www.transparenttextures.com/patterns/french-stucco.png'); /* texture légère */
+  background-image: url('https://www.transparenttextures.com/patterns/french-stucco.png'); 
 }
 
 .container {

@@ -1,40 +1,22 @@
-document.addEventListener("DOMContentLoaded", () => { 
-    const slides = document.querySelectorAll(".slide");
-    const nextArrow = document.getElementById("nextArrow");
-    const prevArrow = document.getElementById("prevArrow");
-    let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".slide"); 
+    const overlayText = document.getElementById("final-text"); 
+    let currentIndex = 0; 
 
-    // Fonction pour afficher la slide active et gérer la flèche gauche
     function updateSlide(index) {
         slides.forEach(slide => slide.classList.remove("active"));
         slides[index].classList.add("active");
 
-        // Masquer la flèche gauche uniquement si on est sur la première slide
-        prevArrow.style.display = index === 0 ? "none" : "block";
-
-        // Toujours afficher la flèche droite
-        nextArrow.style.display = "block";
+        if (index === slides.length - 1) {
+            overlayText.classList.add("visible"); 
+        } else {
+            overlayText.classList.remove("visible"); 
+        }
     }
 
-    // Initialiser la première slide
     updateSlide(currentIndex);
 
-    // Flèche suivante
-    nextArrow.addEventListener("click", () => {
-        if (currentIndex < slides.length - 1) {
-            currentIndex++;
-            updateSlide(currentIndex);
-        } else {
-            // Si on est à la fin, rediriger
-            window.location.href = "../../6/explications_6.html";
-        }
-    });
-
-    // Flèche précédente
-    prevArrow.addEventListener("click", () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateSlide(currentIndex);
-        }
-    });
+    setTimeout(() => {
+        window.location.href = "../../6/explications_6.html"; 
+    }, 4000); 
 });
