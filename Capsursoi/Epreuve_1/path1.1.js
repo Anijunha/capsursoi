@@ -63,9 +63,17 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateSlide(index) {
         slides.forEach(slide => slide.classList.remove("active"));
         slides[index].classList.add("active");
-
-
-        finalText?.classList.toggle("visible", index === slides.length - 1);
+    
+        if (finalText) {
+            if (index === slides.length - 1) {
+                finalText.classList.remove("visible"); 
+                setTimeout(() => {
+                    finalText.classList.add("visible");
+                }, 1000); 
+            } else {
+                finalText.classList.remove("visible");
+            }
+        }
     }
 
     updateSlide(currentIndex);

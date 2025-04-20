@@ -159,21 +159,25 @@ body {
 }
 
 .overlay-text {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 0s linear 1s;
     color: white;
-    font-size: 3.3em;
+    font-size: 3.5em;
     font-family: 'Gloria', sans-serif;
     font-weight: bold;
     text-align: center;
-    margin-top: 5em;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    display: none; 
     z-index: 1000;
+    position: absolute;        
+    top: 25%;                  
+    left: 50%;                  
+    transform: translateX(-50%);  
 }
 
 .overlay-text.visible {
     opacity: 1;
-    display: block; 
+    visibility: visible;
+    transition: opacity 1s ease-in-out;
 }
 
 .buttons {

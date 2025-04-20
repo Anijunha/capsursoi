@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let audio;
 
     if (!window.sharedAudio) {
-        audio = new Audio("../assets/sounds/nostalgia2.wav");
+        audio = new Audio("../assets/sounds/nostalgia.wav");
         audio.loop = true;
 
         audio.volume = 0;
@@ -63,9 +63,17 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateSlide(index) {
         slides.forEach(slide => slide.classList.remove("active"));
         slides[index].classList.add("active");
-
-
-        finalText?.classList.toggle("visible", index === slides.length - 1);
+    
+        if (finalText) {
+            if (index === slides.length - 1) {
+                finalText.classList.remove("visible"); 
+                setTimeout(() => {
+                    finalText.classList.add("visible");
+                }, 1000); 
+            } else {
+                finalText.classList.remove("visible");
+            }
+        }
     }
 
     updateSlide(currentIndex);
@@ -76,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
             currentIndex++;
             updateSlide(currentIndex);
         } else {
-            window.location.href = "../Portes/porte1.html";
+            window.location.href = "../Portes/porte2.html";
         }
     });
 
