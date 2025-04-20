@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let audio;
 
     if (!window.sharedAudio) {
-        audio = new Audio("../assets/sounds/nostalgia.wav");
+        audio = new Audio("../assets/sounds/nostalgia2.wav");
         audio.loop = true;
 
         audio.volume = 0;
