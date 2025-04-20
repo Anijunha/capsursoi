@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const slides = document.querySelectorAll(".slide");
-    const pauseButton = document.getElementById("pauseButton"); // il manquait cette ligne !
+    const pauseButton = document.getElementById("pauseButton");
     const pauseIcon = document.getElementById("pauseIcon");
     const musicButton = document.getElementById("musicButton");
-    const musicIcon = document.getElementById("musicIcon");    
+    const musicIcon = document.getElementById("musicIcon");
     const nextButton = document.getElementById("nextButton");
     const prevButton = document.getElementById("prevButton");
 
@@ -12,12 +12,23 @@ document.addEventListener("DOMContentLoaded", () => {
     let isPaused = false;
     let isMuted = false;
     let audio = new Audio();
+    let jailedAudio = new Audio("../assets/sounds/jailed.wav");
+    jailedAudio.loop = true;
+    jailedAudio.volume = 0.5;
+    let jailedStarted = false;
 
     const audioSources = [
-        null, 
+        null,
         "../assets/sounds/BackgroundA.wav",
         "../assets/sounds/BackgroundB.wav",
         "../assets/sounds/BackgroundC.wav",
+        null,
+        "../assets/sounds/anxiety.wav",
+        "../assets/sounds/nostalgia.wav",
+        "../assets/sounds/nostalgia2.wav",
+        "../assets/sounds/why.wav",
+        "../assets/sounds/peace.wav",
+        "../assets/sounds/loneliness.wav",
         null
     ];
 
@@ -25,6 +36,19 @@ document.addEventListener("DOMContentLoaded", () => {
     updateNavButtons();
     startNavigationDelay();
     playAudioForCurrentSlide();
+
+    function fadeInAudio(audio, duration = 2000, targetVolume = 0.2) {
+        audio.volume = 0;
+        let step = targetVolume / (duration / 50);
+        let interval = setInterval(() => {
+            if (audio.volume < targetVolume - step) {
+                audio.volume += step;
+            } else {
+                audio.volume = targetVolume;
+                clearInterval(interval);
+            }
+        }, 50);
+    }
 
     function showSlide(index) {
         if (index < 0 || index >= slides.length) return;
@@ -46,6 +70,15 @@ document.addEventListener("DOMContentLoaded", () => {
     function showNextSlide() {
         if (!canNavigate) return;
         if (currentIndex < slides.length - 1) {
+            if (!jailedStarted && currentIndex === 0) {
+                jailedStarted = true;
+                jailedAudio.loop = true;
+                jailedAudio.muted = isMuted;
+                jailedAudio.play().then(() => {
+                    fadeInAudio(jailedAudio, 2000, 0.5);
+                }).catch(err => console.warn("Jailed audio error:", err));
+            }
+
             showSlide(currentIndex + 1);
         } else {
             window.location.href = "../Entree_dans_le_manoir/reveil.html";
@@ -63,9 +96,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const src = audioSources[currentIndex];
         if (src) {
             audio = new Audio(src);
-            audio.muted = isMuted; 
+            audio.muted = isMuted;
             if (!isPaused) {
-                audio.play();
+                audio.play().catch(err => console.warn("Playback error:", err));
             }
         }
     }
@@ -94,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (isPaused) {
             audio.pause();
         } else {
-            audio.play();
+            audio.play().catch(err => console.warn("Resume audio error:", err));
         }
     });
 
@@ -106,5 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
             : "../assets/svg/musicB.svg";
 
         audio.muted = isMuted;
+        jailedAudio.muted = isMuted; 
     });
 });
