@@ -4,7 +4,10 @@ body {
     padding: 0;
     text-align: center;
     background-color: #2b2b32;
-    background-image: url(assets/img/coco.jpg); 
+    background-image: url(assets/img/coco.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 header {
