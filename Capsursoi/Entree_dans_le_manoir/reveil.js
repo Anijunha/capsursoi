@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     prevButton.addEventListener('click', () => {
         if (activeIndex === 0) {
-            window.location.href = "../Entree_dans_l'_histoire/entree.html";
+            window.location.href = "../Entree_dans_l_histoire/entree.html";
         } else {
             activeIndex = (activeIndex - 1 + slides.length) % slides.length;
             showSlide(activeIndex);
