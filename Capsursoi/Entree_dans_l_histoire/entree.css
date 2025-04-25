@@ -51,6 +51,7 @@ html, body {
     align-items: center;
     top: 50%;
     left: 50%;
+    line-height: 1.1;
 }
 
 .text {
@@ -75,19 +76,22 @@ html, body {
     top: 15%;
     left: 30%;
     text-align: left;
+    line-height: 1.1;
 }
 
 .text2 {
     z-index: 51;
     top: 19%;
-    width: 700px; 
+    width: 700px;
+    line-height: 1.1;
 }
 
 .text3 {
    top: 65%;
    left: 25%;
    width: 500px;
-   height: 750px; 
+   height: 750px;
+   line-height: 1.1;
 }
 
 

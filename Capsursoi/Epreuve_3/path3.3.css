@@ -51,6 +51,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    
 }
 
 .overlay-text {
@@ -58,6 +59,7 @@ body {
     font-size: 3rem;
     font-family: 'InterTight', sans-serif;
     font-weight: bold;
+    line-height: 1.1;
 }
 
 .buttons {

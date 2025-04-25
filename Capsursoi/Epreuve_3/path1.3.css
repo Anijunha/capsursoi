@@ -165,7 +165,8 @@ body {
     position: absolute;        
     top: 40%;                  
     left: 50%;                  
-    transform: translateX(-50%);  
+    transform: translateX(-50%); 
+    line-height: 1.1;
 }
 
 .overlay-text.visible {

@@ -58,10 +58,10 @@ html {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #f79146;
+    background-color: #ffb075;
     cursor: pointer;
     transition: background-color 0.3s;
-    border: none; /* ← ajoute cette ligne */
+    border: none;
 
 }
 
@@ -86,7 +86,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #7c6142;  
+    color: #f8ecde;  
 }
 
 main {
@@ -94,22 +94,19 @@ main {
 }
 
 .accueil {
-    margin-top: 3em;
+    margin-top: 1em;
     text-align: center;
     position: relative;
-    border-bottom: 0.3em solid #F2CB9B;
-    padding-bottom: 10px;
-    border-top: 0.3em solid #F2CB9B;
-    padding-top: 10px;
+    font-family: amatic-sc;
+    font-size: 2em;
 }
 
 .custom-font1 {
-    font-family: 'InterTight', regular;
-    font-size: 1.8em;
+    font-family: 'amatic-sc', regular;
+    font-size: 2.3em;
     color: #F2CB9B;
     margin-inline: 10%;
-    padding-bottom: 10px;
-    border-bottom: 0.15em solid #F2CB9B;
+    line-height: 1.1;
 }
 
 .custom-font2 {
@@ -132,24 +129,35 @@ main {
     line-height: 150%;
     text-align: center;
     margin-top: 50px;
+    line-height: 1.2;
+}
+
+.explications {
+    z-index: 999;
 }
 
 .exp {
     position: absolute;
-    overflow: hidden    ;
+    overflow: hidden;
+    left: 50%;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 100;
+    margin-bottom: 1.5em;
+    flex-shrink: 0;
+    width: 35%;
+    max-width: 35%;
+    height: auto;
 }
 
 .intro-content {
     max-width: 80%;
     padding: 20px;
-    font-size: 1.4em;
-    line-height: 1.5;
+    font-size: 2.2em;
+    line-height: 1.1;
     opacity: 0;
     transition: opacity 1s ease;
+    font-family: amatic-sc;
 }
 
 .intro-content.visible {
