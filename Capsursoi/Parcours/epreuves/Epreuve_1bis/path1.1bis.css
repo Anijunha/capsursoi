@@ -123,6 +123,7 @@ body {
 }   
 
 .arrow-button img.hover {
+    width: 100%;
     display: none;
 }
 
@@ -132,10 +133,6 @@ body {
 
 .arrow-button:hover img.hover {
     display: inline;
-}
-
-.arrow-button:hover img {
-    transform: scale(1.1);
 }
 
 .arrow-button.left {

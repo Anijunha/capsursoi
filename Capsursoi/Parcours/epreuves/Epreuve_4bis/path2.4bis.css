@@ -115,6 +115,7 @@ body {
 
 .arrow-button img.hover {
     display: none;
+    width: 100%;
 }
 
 .arrow-button:hover img.normal {
@@ -123,10 +124,6 @@ body {
 
 .arrow-button:hover img.hover {
     display: inline;
-}
-
-.arrow-button:hover img {
-    transform: scale(1.1);
 }
 
 .arrow-button.right {

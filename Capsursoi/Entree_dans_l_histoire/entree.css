@@ -133,6 +133,7 @@ html, body {
 
 .arrow-button img.hover {
     display: none;
+    width: 100%;
   }
 
 .arrow-button:hover img.normal {
@@ -143,10 +144,6 @@ html, body {
     display: inline;
 }
   
-.arrow-button:hover img {
-    transform: scale(1.1);
-}
-
 .arrow-button.left {
     left: 10px;
 }
@@ -172,6 +169,7 @@ html, body {
     z-index: 100;
     display: flex;
     gap: 15px;
+    margin: 1.2em;
 }
 
 .icon-button {

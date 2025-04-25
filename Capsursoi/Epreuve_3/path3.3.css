@@ -121,6 +121,7 @@ body {
 }   
 
 .arrow-button img.hover {
+    width: 100%;
     display: none;
 }
 
@@ -130,10 +131,6 @@ body {
 
 .arrow-button:hover img.hover {
     display: inline;
-}
-
-.arrow-button:hover img {
-    transform: scale(1.1);
 }
 
 .arrow-button.left {
@@ -167,6 +164,7 @@ body {
     z-index: 100;
     display: flex;
     gap: 15px;
+    margin: 1.2em;
 }
 
 .icon-button {
