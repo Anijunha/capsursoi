@@ -63,8 +63,9 @@ html, body {
     text-align: center;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    font-family: Gloria;
-    z-index: 100; 
+    font-family: amatic-sc;
+    z-index: 100;
+    line-height: 1.2;
 }
 
 

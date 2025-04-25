@@ -61,11 +61,11 @@ body {
 
 
 .left {
-    margin-left: 10%;
+    margin-left: 0;
 }
 
 .right {
-    margin-right: 10%;
+    margin-right: 0;
 }
 
 .arrow-button {
@@ -137,8 +137,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 350px;
-    height: 350px;
+    width: 325px;
+    height: 165px;
     color: white;
     font-size: 2.7rem;
     text-decoration: none;
@@ -146,8 +146,9 @@ body {
     text-align: center;
     font-family: 'Gloria';
     transition: transform 0.2s ease;
-    line-height: 0.8;
+    line-height: 1;
     margin-bottom: 0;
+    align-items: center;
 }
 
 .custom-svg-button:hover {
@@ -158,14 +159,15 @@ body {
     position: absolute;
     margin-top: 30px;
 }
+
 .buttons {
     position: absolute;
     bottom: 10%;
     width: 100%;
     display: flex;
-    justify-content: space-between;
     margin-top: 5%;
-    top: 55%;
+    top: 50%;
+    justify-content: space-around;
 }
 
 .top-buttons {
