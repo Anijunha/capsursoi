@@ -25,6 +25,27 @@ footer {
     font-family: InterTight;
 }
 
+.accueil {
+    margin: 10px;
+    top: 10%;
+    left: 7%;
+    position: absolute;
+    color: #F2CB9B;
+    text-decoration: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #F2CB9B;
+    font-family: amatic-sc;
+    font-size: 3.8em;
+    margin-inline: 10%;
+}
+
+nav a:hover {
+    color: #f8ecde;  
+}
+
 .sommaire-container {
     padding: 100px 20px 120px;
 }

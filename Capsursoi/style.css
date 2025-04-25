@@ -8,7 +8,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 header {
@@ -39,7 +39,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #7c6142;  
+    color: #f8ecde;  
 }
 
 main {
@@ -53,17 +53,14 @@ main {
     position: absolute;
 }
 
-.lintr {
-    top: 25%;
-    left: 20%;
-    position: absolute;
-}
 
 .apropos {
-    margin: 10px;
+    margin: 0.3em;
     top: 10%;
     left: 7%;
     position: absolute;
+    font-family: Grodna;
+    font-size: 2.1em;
 }
 
 .bandeau {
@@ -106,7 +103,7 @@ main {
 }
 
 .start-image {
-    width: 250px; 
+    width: 22%; 
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
 }
@@ -117,14 +114,11 @@ main {
 }
 
 .custom-font1 {
-    font-family: 'InterTight', regular;
-    font-size: 3.5em;
+    font-family: 'Grodna', regular;
+    font-size: 8em;
     color: #F2CB9B;
     display: inline-block; 
-    border-bottom: 12px solid #F2CB9B;
-    padding-bottom: 10px;
-    border-top: 12px solid #F2CB9B;
-    padding-top: 10px;
+    margin: 0;
 }
 
 .custom-font2 {
@@ -141,7 +135,7 @@ main {
 
 @font-face {
     font-family: 'Grodna';
-    src: url('assets/fonts/Grodna.ttf') format('truetype');
+    src: url('assets/fonts/amatic-sc.bold.ttf') format('truetype');
 }
 
 @font-face {
@@ -156,13 +150,13 @@ main {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #151515;  
+    background-color: #1f1c25;  
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    pointer-events: none;
+    opacity: 1;
+    pointer-events: auto;
     z-index: 9999;
     transition: opacity 1s ease-in-out; 
 }
@@ -264,12 +258,13 @@ main {
 .revue-link-container {
     position: absolute;
     top: 10%; 
-    right: 7%; 
+    right: 7%;
+    padding: 0.3em
 }
 
 .revue-link {
-    font-family: 'InterTight', regular;
-    font-size: 22pt;
+    font-family: Grodna;
+    font-size: 2.1em;
     color: #F2CB9B;
     text-decoration: none; 
     opacity: 0; 
@@ -281,5 +276,5 @@ main {
 }
 
 .revue-link:hover {
-    color: #7c6142; 
+    color: #f8ecde; 
 }

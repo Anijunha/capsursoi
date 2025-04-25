@@ -6,21 +6,16 @@ window.onload = function() {
     const attentionText = document.getElementById('attention-text'); 
 
     setTimeout(() => {
-        introScreen.style.opacity = '1';
-        introScreen.style.pointerEvents = 'auto';
-    }, 100);
-
-    setTimeout(() => {
         welcomeText.style.opacity = '1';
-    }, 1250);
+    }, 750);
 
     setTimeout(() => {
         exploreBtn.style.opacity = '1';
-    }, 2500);
+    }, 1500);
 
     setTimeout(() => {
         attentionText.style.opacity = '1';
-    }, 2000);
+    }, 1000);
 
     exploreBtn.addEventListener('click', function() {
         introScreen.style.transition = "opacity 1s ease-out"; 

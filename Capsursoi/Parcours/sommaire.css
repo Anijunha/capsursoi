@@ -3,6 +3,11 @@
     src: url('../assets/fonts/InterTight.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Grodna';
+    src: url('../assets/fonts/amatic-sc.bold.ttf') format('truetype');
+}
+
 body {
     font-family: InterTight, sans-serif;
     margin: 0;
@@ -28,19 +33,23 @@ footer {
 .accueil {
     margin: 10px;
     top: 10%;
-    left: 0;
+    left: 7%;
     position: absolute;
     color: #F2CB9B;
     text-decoration: none;
 }
 
-.custom-font5 {
-    font-family: 'InterTight', regular;
-    font-size: 22pt;
+nav a {
+    text-decoration: none;
     color: #F2CB9B;
+    font-family: Grodna;
+    font-size: 3.8em;
     margin-inline: 10%;
 }
 
+nav a:hover {
+    color: #f8ecde;  
+}
 
 .sommaire-container {
     padding: 50px 40px 140px;
@@ -60,25 +69,22 @@ footer {
 }
 
 .custom-font1 {
-    font-family: 'InterTight', regular;
-    font-size: 3.5em;
+    font-family: 'Grodna', regular;
+    font-size: 8em;
     color: #F2CB9B;
-    border-bottom: 12px solid #F2CB9B;
-    border-top: 12px solid #F2CB9B;
-    padding: 20px 0;
     display: inline-block;
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin-top: 7%;
+    margin-top: 1.4em;
 }
 
 .custom-font2 {
-    font-family: 'InterTight', regular;
-    font-size: 2.1em;
+    font-family: 'amatic-sc', regular;
+    font-size: 2.9em;
+    font-weight: 700;
     color: #F2CB9B;
     margin-top: 2em;
-    font-variant: small-caps;
 }
 
 .chiffre {
