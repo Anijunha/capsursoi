@@ -43,12 +43,12 @@ body {
 
 .text-overlay {
     position: absolute;
-    top: 10%;
+    top: 7%;
+    font-family: amatic-sc;
     width: 100%;
     text-align: center;
     color: white;
     font-size: 5em;
-    font-family: Gloria;
 }
 
 .buttons {
@@ -138,17 +138,18 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 350px;
-    height: 350px;
+    width: 305px;
+    height: 155px;
     color: white;
     font-size: 2.7rem;
     text-decoration: none;
     border: none;
     text-align: center;
-    font-family: 'Gloria';
+    font-family: 'amatic-sc';
     transition: transform 0.2s ease;
-    line-height: 0.8;
+    line-height: 1;
     margin-bottom: 0;
+    align-items: center;
 }
 
 .custom-svg-button:hover {
@@ -158,4 +159,5 @@ body {
 .texte-choix {
     position: absolute;
     margin-top: 30px;
+    align-items: center;
 }
