@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;500&display=swap');
+@import url('https://use.typekit.net/fth1ehg.css');
+@import url('https://use.typekit.net/fth1ehg.css');
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+
 
 body {
   font-family: 'Inter', sans-serif;
@@ -25,31 +28,126 @@ body {
 }
 
 .logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.2rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
+  font-family: "rl-folklor", sans-serif;
+  font-size: 9.2rem;
+  font-weight: 900;
+  color: #23074f;
+  font-style: normal;
   letter-spacing: -0.5px;
 }
 
+.second {
+  font-family: "europa", sans-serif;
+  font-size: 3.4rem;
+  color: white;
+  margin-top: -3vh;
+  font-style: normal;
+  letter-spacing: -0.5px;
+  text-align: left;
+}
+
 .tagline {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 300;
   margin-bottom: 2.5rem;
-  color: #333;
+  color: white;
+  text-align: left;
+}
+
+.modal {
+  display: flex; /* Toujours flex pour centrer le contenu */
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  
+  opacity: 0; /* invisible au départ */
+  pointer-events: none; /* empêche les clics quand invisible */
+  transition: opacity 0.4s ease; /* transition smooth */
+}
+
+.modal.show {
+  opacity: 1; /* visible */
+  pointer-events: auto; /* réactive les clics */
+}
+
+/* La fenêtre */
+.modal-content {
+  background-color: rgba(228, 227, 238, 0.95); /* fond presque opaque */
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.modal-content h2 {
+  font-family: 'rl-folklor', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+/* Police des paragraphes */
+.modal-content p {
+  font-family: 'europa', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+/* Croix pour fermer */
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Texte à l'intérieur */
+.modal-content h2 {
+  margin-top: 0;
+}
+
+#openModal {
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #23074f;
+  color: #23074f;
+  background-color: transparent;
+  font-weight: 500;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  font-variant: small-caps;
+  cursor: pointer; 
+  margin-top: 0.7em;
+}
+
+/* Effet au survol */
+#openModal:hover {
+  background-color: #23074f;
+  color: white;
 }
 
 .nav-links {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  color: #23074f;
 }
 
 .nav-btn {
   text-decoration: none;
   padding: 0.75rem 1.5rem;
-  border: 2px solid #111;
-  color: #111;
+  border: 2px solid #23074f;
+  color: #23074f;
   background-color: transparent;
   font-weight: 500;
   border-radius: 50px;
@@ -60,18 +158,44 @@ body {
 }
 
 .nav-btn:hover {
-  background-color: #111;
+  background-color: #23074f;
   color: #f4f3f2;
 }
 
 .nav-btn.alt {
-  border-color: #111;
-  color: #111;
+  border-color: #23074f;
+  color: #23074f;
 }
 
 .nav-btn.alt:hover {
-  background-color: #111;
+  background-color: #23074f;
   color: #f4f3f2;
+}
+
+.footer {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  background: transparent; /* transparent */
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-container {
+  display: flex;
+  gap: 2rem; /* espace entre les icônes */
+}
+
+.footer-container img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-container img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
 }
 
 @keyframes fadeIn {
