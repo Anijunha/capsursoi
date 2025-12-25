@@ -9,7 +9,7 @@
 
 
 
-body {
+/*body {
   font-family: 'Inter', sans-serif;
   background-color: #f4f3f2;
   color: #111;
@@ -19,11 +19,41 @@ body {
   justify-content: center;
   background-image: url(./Capsursoi/assets/img/bg1.jpg) ; 
 }
+*/
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f3f2;
+  color: #111;
+  min-height: 100vh;
+  background-image: url(./Capsursoi/assets/img/bg1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-.container {
+/*.container {
   text-align: center;
   max-width: 600px;
   padding: 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+*/
+.container {
+  max-width: 600px;
+  padding: 1rem 1.5rem;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.title {
+  padding: 1rem 1.5rem;
+  padding-top: 7rem;
+  padding-left: 4%;
+  max-width: 600px;
+  align-items: center;
+  margin: auto;
+  text-align: center;
   animation: fadeIn 1s ease-in-out;
 }
 
@@ -34,6 +64,7 @@ body {
   color: #23074f;
   font-style: normal;
   letter-spacing: -0.5px;
+  text-align: left;
 }
 
 .second {
@@ -47,11 +78,11 @@ body {
 }
 
 .tagline {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 300;
   margin-bottom: 2.5rem;
   color: white;
-  text-align: left;
+  text-align: center;
 }
 
 .modal {
@@ -206,5 +237,47 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .container {
+    padding-top: 3rem;
+  }
+
+  .logo {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  .second {
+    font-size: 2.2rem;
+    margin-top: -0.5rem;
+    text-align: center;
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+  .nav-btn {
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  #openModal {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .footer-container img {
+    width: 32px;
+    height: 32px;
   }
 }

@@ -1,21 +1,20 @@
-console.log("Page d'accueil de Louis Chaussignant chargée.");
 const modal = document.getElementById("contactModal");
 const btn = document.getElementById("openModal");
 const closeBtn = document.querySelector(".modal .close");
 
-// Ouvrir la modal au clic
-btn.onclick = () => {
-  modal.classList.add("show");
-}
+if (btn && modal && closeBtn) {
 
-// Fermer avec la croix
-closeBtn.onclick = () => {
-  modal.classList.remove("show");
-}
+  btn.addEventListener("click", () => {
+    modal.classList.add("show");
+  });
 
-// Fermer en cliquant en dehors
-window.onclick = (e) => {
-  if (e.target === modal) {
+  closeBtn.addEventListener("click", () => {
     modal.classList.remove("show");
-  }
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("show");
+    }
+  });
 }
